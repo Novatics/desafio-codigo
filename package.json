@@ -1,0 +1,14 @@
+{
+  "name": "desafio-codigo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Novatics/desafio-codigo.git",
+  "author": "Novatics <hello@novatics.com.br>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.0.4"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
