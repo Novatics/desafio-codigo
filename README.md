@@ -64,6 +64,20 @@ Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir d
   * O código que implementa a solução para os dois pontos descritos na seção de [Objetivos](#objetivos).
   * Testes unitários são um diferencial!
 
-  ## Observação
+  ## Informações adicionais
 
   Foram criadas duas assinaturas de funções no arquivo `kudos.js`. Fique à vontade para alterá-las, criar novas funções, etc. Lembre-se somente de ajustar o arquivo de testes `kudos.test.js` de acordo com as alterações feitas.
+  
+  **Como executar os testes:**
+  
+  * Instale as dependências:
+  
+  ```
+    yarn
+  ```
+  
+  
+  * Execute os testes
+  ```
+    yarn test
+  ```
