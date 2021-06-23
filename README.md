@@ -25,11 +25,14 @@ Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir d
   
   1. Converter um conjunto de pontos recebidos por uma pessoa para um conjunto de kudos. Os seguintes requisitos devem ser considerados:
       1. A conversão deve ser feita de modo a retornar o menor número possível de kudos (retornando um conjunto de kudos de maior valor possível).
-      2. O conjunto de kudos convertidos deve ser retornado em ordem decrescente.
+      2. O conjunto de kudos convertidos deve ser retornado em ordem decrescente. Esse conjunto pode conter kudos repetidos (veja o Exemplo 3).
       3. Para esse problema você pode esperar que o número de pontos de uma pessoa será sempre divisível pelo conjunto de kudos.
-   2. Converter um conjunto de kudos para uma mensagem contendo o valor em reais por extenso dos kudos recebidos. A mensagem deve ter o seguinte formato: 
-
-          "Parabéns, você recebeu ${valor por extenso} reais em retorno aos kudos ${lista de kudos separada por vígula}!"
+   2. Converter um conjunto de kudos para uma mensagem contendo o valor em reais por extenso dos kudos recebidos.
+      1. A mensagem deve ter o seguinte formato:
+          ```
+          "Você recebeu ${valor por extenso} reais em retorno aos kudos ${lista de kudos separada por vígula}!"
+          ```
+      2. O valor será sempre menor que 1 milhão de reais.
 
   ### Exemplo:
   Tomando por base as seguinte tabela de conversão:
@@ -47,7 +50,7 @@ Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir d
   * A seguinte mensagem deve ser retornada:
 
       ```
-      "Parabéns, você recebeu treze reais em retorno aos kudos NICE, GOOD!"
+      "Você recebeu treze reais em retorno aos kudos NICE, GOOD!"
       ```
 
 
@@ -56,7 +59,15 @@ Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir d
   * A seguinte mensagem deve ser retornada:
 
       ```
-      "Parabéns, você recebeu quarenta reais em retorno aos kudos SUPER, GOOD, NICE, OK!"
+      "Você recebeu quarenta reais em retorno aos kudos SUPER, GOOD, NICE, OK!"
+      ```
+      
+  **Exemplo 3.** Uma pessoa recebeu 40 pontos:
+  * Os seguintes kudos devem ser atribuídos: GOOD, GOOD
+  * A seguinte mensagem deve ser retornada:
+
+      ```
+      "Você recebeu dezesseis reais em retorno aos kudos GOOD, GOOD!"
       ```
 
   ## O que você deve entregar para este desafio
