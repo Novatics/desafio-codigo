@@ -7,6 +7,6 @@ test('test getKudosForUser', () => {
 });
 
 test('test getKudosValueMessageForUser', () => {
-  expect(kudos.getKudosValueMessageForUser(30))
+  expect(kudos.getKudosValueMessageForUser(kudos.getKudosForUser(30)))
     .toEqual('Você recebeu treze reais em retorno aos kudos NICE, GOOD!');
 });
