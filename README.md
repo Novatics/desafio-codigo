@@ -50,7 +50,7 @@ Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir d
   * A seguinte mensagem deve ser retornada:
 
       ```
-      "Você recebeu treze reais em retorno aos kudos NICE, GOOD!"
+      "Você recebeu treze reais em retorno aos kudos GOOD, NICE!"
       ```
 
 
