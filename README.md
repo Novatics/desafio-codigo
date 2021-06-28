@@ -46,7 +46,7 @@ Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir d
   |  SUPER              |  100                |  25                 |
 
   **Exemplo 1.** Uma pessoa recebeu 30 pontos:
-  * Os seguintes kudos devem ser atribuídos: NICE, GOOD
+  * Os seguintes kudos devem ser atribuídos: GOOD, NICE 
   * A seguinte mensagem deve ser retornada:
 
       ```
