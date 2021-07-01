@@ -66,14 +66,6 @@ function getKudosValueMessageForUser(kudos) {
     })
   })
 
-  const dictionary = {
-    1: ['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove'],
-    10: [null, 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove'],
-    2: [null, 'dez', 'vite', 'trinta', 'quarenta', 'cinquenta', 'sessenta', 'setenta', 'oitenta', 'noventa', 'cem'],
-    3: ['cento', 'duzentos', 'trezentos', 'quatrocentos', 'quinhentos', 'seiscentos', 'setecentos', 'oitocentos', 'novecentos', 'mil']
-  }
-
-  console.log(real)
   const parts = real.toString().split('')
   let sentence = ''
 
@@ -126,7 +118,6 @@ function getKudosValueMessageForUser(kudos) {
 
   return(`Você recebeu ${sentence} reais em retorno aos kudos ${kudos.join(', ')}!`)
 }
-getKudosValueMessageForUser(['SUPER'])
 
 module.exports = {
   getKudosForUser,
