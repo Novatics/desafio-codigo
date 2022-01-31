@@ -4,91 +4,77 @@ Bem vindo ao desafio de código da Novatics!
 
 Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir descrevemos o contexto do desafio, o problema, os objetivos e listamos o que deve ser entregue pelo candidato.
 
-  ## Contexto
-  Para este desafio vamos utilizar um cenário comum em várias empresas: a atribuição de 
-  kudos para pessoas que mandaram bem em algum projeto e/ou tarefa.
-    
-  Os kudos são uma forma de elogio e agradecimento ao trabalho executado por uma pessoa.
+## Contexto
 
-  ## Problema
+Neste desafio trouxemos cinco problemas, cada um com um nível de dificuldade diferente, para avaliarmos a capacidade de solução de problemas e organização dos candidatos dada uma tarefa.
 
-  Uma empresa tem um programa de incentivo que converte kudos para um valor em reais que é repassado ao colaborador. Funciona assim:
-  - Os colaboradores podem receber pontos em retribuição a uma tarefa e/ou projeto executado.
-  - Os pontos são convertidos para kudos que ficam registrados no histórico do colaborador.
-  - Os kudos são convertidos para um valor em reais que será pago ao colaborador.
-  
-  Depois de feita a conversão dos kudos para o valor em reais, a empresa envia uma mensagem de agradecimento para o colaborador.
-  
-  ## Objetivos
-  
-  Neste desafio sua missão é desenvolver um código que deve cumprir a seguintes funcões:
-  
-  1. Converter um conjunto de pontos recebidos por uma pessoa para um conjunto de kudos. Os seguintes requisitos devem ser considerados:
-      1. A conversão deve ser feita de modo a retornar o menor número possível de kudos (retornando um conjunto de kudos de maior valor possível).
-      2. O conjunto de kudos convertidos deve ser retornado em ordem decrescente. Esse conjunto pode conter kudos repetidos (veja o Exemplo 3).
-      3. Para esse problema você pode esperar que o número de pontos de uma pessoa será sempre divisível pelo conjunto de kudos.
-   2. Converter um conjunto de kudos para uma mensagem contendo o valor em reais por extenso dos kudos recebidos.
-      1. A mensagem deve ter o seguinte formato:
-          ```
-          "Você recebeu ${valor por extenso} reais em retorno aos kudos ${lista de kudos separada por vígula}!"
-          ```
-      2. O valor será sempre menor que 1 milhão de reais.
+## Problema 1
 
-  ### Exemplo:
-  Tomando por base as seguinte tabela de conversão:
-  
-  | kudos               |  pontos             |  valor              |
-  | ------------------- | ------------------- | ------------------- |
-  |  OK                 |  5                  |  2                  |
-  |  NICE               |  10                 |  5                  |
-  |  GOOD               |  20                 |  8                  |
-  |  GREAT              |  50                 |  15                 |
-  |  SUPER              |  100                |  25                 |
+<details>
+<summary>Manipulando listas</summary>
+Crie uma função que receba uma lista de números inteiros como parâmetro. Essa função deverá primeiramente ordenar os elementos em ordem crescente e após isso, deverá remover os elementos duplicados da lista, mantendo a ordem anterior.
 
-  **Exemplo 1.** Uma pessoa recebeu 30 pontos:
-  * Os seguintes kudos devem ser atribuídos: GOOD, NICE 
-  * A seguinte mensagem deve ser retornada:
+### Exemplo de como deve funcionar a solução:
 
-      ```
-      "Você recebeu treze reais em retorno aos kudos GOOD, NICE!"
-      ```
+```
+ input: [8, 5, 10, 5, 2, 4, 4, 3]
+ output: [2, 3, 4, 5, 8, 10]
 
+```
 
-  **Exemplo 2.** Uma pessoa recebeu 135 pontos:
-  * Os seguintes kudos devem ser atribuídos: SUPER, GOOD, NICE, OK
-  * A seguinte mensagem deve ser retornada:
+</details>
 
-      ```
-      "Você recebeu quarenta reais em retorno aos kudos SUPER, GOOD, NICE, OK!"
-      ```
-      
-  **Exemplo 3.** Uma pessoa recebeu 40 pontos:
-  * Os seguintes kudos devem ser atribuídos: GOOD, GOOD
-  * A seguinte mensagem deve ser retornada:
+## Problema 2
 
-      ```
-      "Você recebeu dezesseis reais em retorno aos kudos GOOD, GOOD!"
-      ```
+<details>
+<summary>Validando Sudoku</summary>
 
-  ## O que você deve entregar para este desafio
+Determine se uma tabela de Sudoku está valida, ou seja, os elementos inseridos correspondem as regras do jogo. Essas regras são:
 
-  * O código que implementa a solução para os dois pontos descritos na seção de [Objetivos](#objetivos).
-  * Testes unitários são um diferencial!
+1. Cada linha deve conter dígitos de 1 - 9, SEM repetição;
+2. Cada coluna deve conter dígitos de 1 - 9, SEM repetição;
+3. Todas as noves mini-tabelas devem conter dígitos de 1 - 9, SEM repetição;
 
-  ## Informações adicionais
+Sudoku válido:
 
-  Foram criadas duas assinaturas de funções no arquivo `kudos.js`. Fique à vontade para alterá-las, criar novas funções, etc. Lembre-se somente de ajustar o arquivo de testes `kudos.test.js` de acordo com as alterações feitas.
-  
-  **Como executar os testes:**
-  
-  * Instale as dependências:
-  
-  ```
-    yarn
-  ```
-  
-  
-  * Execute os testes
-  ```
-    yarn test
-  ```
+![valid_sudoku](https://user-images.githubusercontent.com/22327574/145793588-5e8d6629-ea0b-4323-b4be-e775729da11f.png)
+
+#### Exemplo de como deve funcionar a solução:
+
+```
+board =
+   [["5","3",".",".","7",".",".",".","."]
+   ,["6",".",".","1","9","5",".",".","."]
+   ,[".","9","8",".",".",".",".","6","."]
+   ,["8",".",".",".","6",".",".",".","3"]
+   ,["4",".",".","8",".","3",".",".","1"]
+   ,["7",".",".",".","2",".",".",".","6"]
+   ,[".","6",".",".",".",".","2","8","."]
+   ,[".",".",".","4","1","9",".",".","5"]
+   ,[".",".",".",".","8",".",".","7","9"]]
+
+   output: true
+```
+
+```
+board =
+   [["8","3",".",".","7",".",".",".","."]
+   ,["6",".",".","1","9","5",".",".","."]
+   ,[".","9","8",".",".",".",".","6","."]
+   ,["8",".",".",".","6",".",".",".","3"]
+   ,["4",".",".","8",".","3",".",".","1"]
+   ,["7",".",".",".","2",".",".",".","6"]
+   ,[".","6",".",".",".",".","2","8","."]
+   ,[".",".",".","4","1","9",".",".","5"]
+   ,[".",".",".",".","8",".",".","7","9"]]
+
+   output: false
+```
+
+</details>
+
+## O que você deve entregar para este desafio
+
+- Código organizado e legível;
+- A linguagem a sua escolha, mas preferencialmente, utilize Javascript;
+- Adição de testes para cada desafio é bônus
