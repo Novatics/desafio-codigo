@@ -2,11 +2,12 @@
 
 Bem vindo ao desafio de código da Novatics!
 
-Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir descrevemos o contexto do desafio, o problema, os objetivos e listamos o que deve ser entregue pelo candidato.
+Este desafio faz parte do processo seletivo da Novatics. Nas seções a seguir descrevemos o contexto do desafio, os problemas e listamos o que deve ser entregue pelo candidato.
 
 ## Contexto
 
-Neste desafio trouxemos cinco problemas, cada um com um nível de dificuldade diferente, para avaliarmos a capacidade de solução de problemas e organização dos candidatos dada uma tarefa.
+Neste desafio apresentamos dois problemas com diferentes níveis de dificuldade para avaliarmos a capacidade de organização e solução de problemas dos candidatos.
+
 
 ## Problema 1
 
@@ -77,4 +78,4 @@ board =
 
 - Código organizado e legível;
 - A linguagem a sua escolha, mas preferencialmente, utilize Javascript;
-- Adição de testes para cada desafio é bônus
+- Adição de testes para cada desafio é bônus;
